@@ -75,6 +75,7 @@ class App extends Component {
       );
     });
 
+    /* We already used this in CartItem.js */
     const summary = Object.keys(this.state.selected).map((feature, idx) => {
       const featureHash = feature + '-' + idx;
       const selectedOption = this.state.selected[feature];
@@ -90,6 +91,7 @@ class App extends Component {
       );
     });
 
+    /* We already used this in Total.js */
     const total = Object.keys(this.state.selected).reduce(
       (acc, curr) => acc + this.state.selected[curr].cost,
       0

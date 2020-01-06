@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import Total from './Total';
 import CartItem from './CartItem';
+import Cart from './Cart';
 
 const FEATURES = {
   Processor: [
@@ -66,4 +67,4 @@ const myObject = {
         cost: 1500
       }
     }
-ReactDOM.render(<Total selected={myObject}  />, document.getElementById('root'));
+ReactDOM.render(<App features={FEATURES}  />, document.getElementById('root'));
