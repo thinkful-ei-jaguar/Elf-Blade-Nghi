@@ -5,7 +5,7 @@ const Total = (props) => {
     (acc, curr) => acc + props.selected[curr].cost,
     0
   );
-
+  
   return (
     <div className="summary__total">
       <div className="summary__total__label">Total</div>
