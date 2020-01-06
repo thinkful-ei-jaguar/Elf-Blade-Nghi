@@ -5,7 +5,10 @@ import Total from './Total';
 class Cart extends Component {
   render() {
     return (
-      <div>
+  
+      <section className="main__summary">
+        <h2>Your cart</h2>
+
         {Object.keys(this.props.selected).map((itm, index) => 
         <CartItem 
         key={index}
@@ -15,7 +18,8 @@ class Cart extends Component {
         itemCost={this.props.selected[itm].cost}
         />)}
         <Total selected={this.props.selected} />
-      </div>
+      </section>
+      
     )
   }
 }

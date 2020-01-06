@@ -1,7 +1,33 @@
-import React, { Component } from 'react';
+import React, { Component, useCallback } from 'react';
 
 const CustomItem = (props) => {
-  return;
+  
+  let idKey = props.itemIndex + '-' + props.partName;
+  const USCurrency = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD'
+  });
+
+  return (
+
+    <div key={idKey} className="feature__item">
+      <input
+        type="radio"
+        id={idKey}
+        className="feature__option"
+
+        name={props.partName}
+        checked={props.nameCheckCallback(props.partName, props.featureName)} 
+        
+        onChange={e => props.updateCallback(props.featureName, e.target.value)}
+      />
+
+      <label htmlFor={idKey} className="feature__label">
+        {props.partName} ({USCurrency.format(props.partCost)})
+      </label>
+    </div>
+    
+  );
 }
 
 export default CustomItem;
@@ -16,6 +42,8 @@ export default CustomItem;
       style: 'currency',
       currency: 'USD'
       });
+
+
     return (
       <div key={itemHash} className="feature__item">
         <input
