@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const Total = (props) => {
   const totalCost = Object.keys(props.selected).reduce(
@@ -10,7 +10,7 @@ const Total = (props) => {
     <div className="summary__total">
       <div className="summary__total__label">Total</div>
       <div className="summary__total__value"> 
-        {totalCost}
+        ${totalCost}
       </div>
     </div>
   )

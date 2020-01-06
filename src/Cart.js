@@ -20,7 +20,7 @@ class Cart extends Component {
         <Total selected={this.props.selected} />
       </section>
       
-    )
+    );
   }
 }
 
